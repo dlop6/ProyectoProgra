@@ -9,24 +9,30 @@
             "user": "perro",
             "password": "carro",
             "perfil": {
-                "Primer nombre": "sada",
-                "Segundo nombre": "asda",
-                "Primer apellido": "sadsa",
-                "Segundo apellido": "asda",
-                "Fecha de nacimiento": "sasad",
-                "Nacionalidad": "asdas",
+                "Primer nombre": "Diego",
+                "Segundo nombre": "Javier",
+                "Primer apellido": "Lop",
+                "Segundo apellido": "Rein",
+                "Fecha de nacimiento": "02/03/23",
+                "Nacionalidad": "guatemalteco",
                 "Departamento": "Quich\u00e9",
                 "Clima": "Templado"
             },
             "documentos": {
-                "identificacion": "C:/Users/djlop/Downloads/Estudio Calculo_.pdf",
-                "antecedentes_penales": "C:/Users/djlop/Downloads/Proyecto 2.pdf",
-                "antecedentes_policiales": "C:/Users/djlop/Downloads/Proyecto 2.pdf",
+                "identificacion": "C:/Users/djlop/Downloads/Proyecto 2.pdf",
+                "antecedentes_penales": "C:/Users/djlop/Downloads/Estudio Calculo_.pdf",
+                "antecedentes_policiales": "C:/Users/djlop/Downloads/Estudio Calculo_.pdf",
                 "boleto_ornato": "C:/Users/djlop/Downloads/Estudio Calculo_.pdf",
-                "constancia_laboral": "C:/Users/djlop/Downloads/Proyecto 2.pdf",
-                "cartas_recomendacion": "C:/Users/djlop/Downloads/Proyecto 2.pdf",
-                "cv": "C:/Users/djlop/Downloads/Proyecto 2.pdf"
+                "constancia_laboral": "C:/Users/djlop/Downloads/Estudio Calculo_.pdf",
+                "cartas_recomendacion": "C:/Users/djlop/Downloads/GMT20240314-182431_Recording_1920x1080.mp4",
+                "cv": "C:/Users/djlop/Downloads/GMT20240312-185400_Recording_1920x1080.mp4"
             }
+        },
+        {
+            "user": "carlos",
+            "password": "montana",
+            "perfil": {},
+            "documentos": {}
         }
     ]
 }

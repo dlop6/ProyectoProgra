@@ -1,9 +1,16 @@
 from tkinter import *
+from tkinter import messagebox
 import json
 from Menu import Menu
 
 class Login:
     def __init__(self, ventana):
+        """
+        Clase que representa la ventana de inicio de sesión.
+
+        Args:
+            ventana (Tk): La ventana principal de la aplicación.
+        """
         self.ventana = ventana
         self.usuario = None
         self.ventana.title("Iniciar sesión")
@@ -28,6 +35,10 @@ class Login:
         self.boton_create_user.pack()
         
     def login(self):
+        """
+        Método que se ejecuta al hacer clic en el botón "Iniciar sesión".
+        Verifica las credenciales ingresadas por el usuario y autentica al usuario si son válidas.
+        """
         usuario = self.entry_usuario.get()
         password = self.entry_password.get()
 
@@ -48,6 +59,10 @@ class Login:
         
 
     def create_user(self):
+        """
+        Método que se ejecuta al hacer clic en el botón "Crear usuario".
+        Crea un nuevo usuario con las credenciales ingresadas por el usuario.
+        """
         usuario = self.entry_usuario.get()
         password = self.entry_password.get()
         
@@ -64,6 +79,9 @@ class Login:
             if user["user"] == usuario:
                 print("El usuario ya existe")
                 break
+            else:
+                messagebox.showinfo("Usuario creado", f"El usuario {usuario} ha sido creado exitosamente, ya puedes iniciar sesión")
+                break
         
         
         data["users"].append(n_usuario)
@@ -72,9 +90,12 @@ class Login:
         with open("usuarios.json", "w") as file:
             json.dump(data, file, indent=4)
         
-        print("Nuevo usuario creado:")
-        print("Usuario:", usuario)
-        print("Contraseña:", password)
     
     def getUsuario(self):
+        """
+        Método que devuelve el nombre de usuario autenticado.
+
+        Returns:
+            str: El nombre de usuario autenticado.
+        """
         return self.usuario

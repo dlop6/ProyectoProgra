@@ -186,5 +186,3 @@ class Menu:
         
         
         
-Menu("perro")
-tkinter.mainloop()
