@@ -1,0 +1,62 @@
+{
+    "Quiche": {
+        "nombre": "Escuela Barrio Norte",
+        "estudiantes": 640,
+        "capacidad": 300,
+        "grados": 5,
+        "salones": "Todos en un mismo salon",
+        "directora": "Maria Magdalena Pérez",
+        "clima": "templado",
+        "distancia_capital": "140km"
+    },
+    "Solola": {
+        "nombre": "Escuela de Chuisamayac",
+        "estudiantes": 265,
+        "drenajes": "No cuenta con drenajes",
+        "clima": "templado",
+        "distancia_ciudad": "140km"
+    },
+    "Huehuetenango": {
+        "nombre": "EORM FRANCISCA MERIDA DE CHAVEZ",
+        "estudiantes": 200,
+        "salones_primaria": 6,
+        "grados": 6,
+        "director": "Marka Elena Matias Antonio De Montejo",
+        "clima": "frío",
+        "distancia_capital": "255km",
+        "area": "Rural",
+        "jornada": "Matutina",
+        "plan": "Diario (Regular)"
+    },
+    "Retalhuleu": {
+        "nombre": "Escuela de La Reforma",
+        "estudiantes": 300,
+        "salones_primaria": 12,
+        "grados": 6,
+        "servicios": ["Enfermeria", "Salas de reuniones", "Oficina para profesores y gobiernos escolares"],
+        "director": "Mariano Galvez",
+        "clima": "caliente",
+        "distancia_capital": "357km"
+    },
+    "El Progreso": {
+        "nombre": "Escuela Oficial Urbana Mixta Pablo Jimenez Cruz",
+        "estudiantes": 611,
+        "jornada": "matutina",
+        "nivel": "primario",
+        "plan": "diario",
+        "director": "Eswin René Marroquin",
+        "supervisora": "Ileana Hortencia Casasola Oliva",
+        "clima": "caliente",
+        "distancia_capital": "95km"
+    },
+    "Sacatepequez": {
+        "nombre": "Escuela Oficial Urbana Mixta Estados Unidos de America",
+        "estudiantes": 935,
+        "nivel": "primario",
+        "jornada": "vespertina",
+        "plan": "diario",
+        "supervisora": "Ana Meliza Cuyan Valenzuela",
+        "clima": "templado",
+        "distancia_capital": "26km"
+    }
+}

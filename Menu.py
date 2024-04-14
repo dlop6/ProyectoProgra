@@ -1,5 +1,6 @@
 import tkinter 
 from tkinter import filedialog
+from RecomendacionEscuela import RecomendacionEscuela
 import json
 
 class Menu:
@@ -65,18 +66,18 @@ class Menu:
         self.label_archivoSeleccionado = tkinter.Label(self.menuScreen, text="Ningún archivo seleccionado")	
         self.label_archivoSeleccionado.grid(row=3, column=3, columnspan=4, padx=10, pady=10)
                 
-        self.boton_file = tkinter.Button(self.menuScreen, text="Abrir archivo", command=lambda: self.browse_file(self.label_archivoSeleccionado))
+        self.boton_file = tkinter.Button(self.menuScreen, text="Abrir archivo", command=lambda: self.browse_file(self.label_archivoSeleccionado, "identificacion"))
         self.boton_file.grid(row=4, column=3, columnspan=4, padx=10, pady=10)
         
         self.botonContinuar = tkinter.Button(self.menuScreen, text="Continuar", command=self.agregarPerfil)
         self.botonContinuar.grid(row=6, column=0, columnspan=4, padx=10, pady=10)
         
-    def browse_file(self, label):
+    def browse_file(self, label, doc_type):
         file_path = filedialog.askopenfilename()
         file = file_path.split("/")[-1]
         if file_path:
             tkinter.messagebox.showinfo("Información", f"El archivo {file_path} se ha cargado correctamente.")
-            self.documentos["Identificacion"] = file_path
+            self.documentos[doc_type] = file_path
             label.config(text=file)
 
     def agregarPerfil(self):
@@ -106,6 +107,8 @@ class Menu:
                 
             with open("usuarios.json", "w") as file:
                 json.dump(data, file, indent=4)
+                
+            self.menuDocumentos()
         else:
             tkinter.messagebox.showerror("Error", "Por favor, complete todos los campos obligatorios.")
             
@@ -119,43 +122,68 @@ class Menu:
         self.label_antecedentes_penales.grid(row=0, column=0, padx=10, pady=10)
         self.label_antecedentes_penales_documento = tkinter.Label(self.menuScreen, text="Ningún archivo seleccionado")
         self.label_antecedentes_penales_documento.grid(row=0, column=1, padx=10, pady=10)
-        self.boton_antecedentes_penales = tkinter.Button(self.menuScreen, text="Ingresar documento", command=lambda: self.browse_file(self.label_antecedentes_penales_documento))
+        self.boton_antecedentes_penales = tkinter.Button(self.menuScreen, text="Ingresar documento", command=lambda: self.browse_file(self.label_antecedentes_penales_documento, "antecedentes_penales"))
         self.boton_antecedentes_penales.grid(row=0, column=2, padx=10, pady=10)
 
         self.label_antecedentes_policiales = tkinter.Label(self.menuScreen, text="Antecedentes policiales:")
         self.label_antecedentes_policiales.grid(row=1, column=0, padx=10, pady=10)
         self.label_antecedentes_policiales_documento = tkinter.Label(self.menuScreen, text="Ningún archivo seleccionado")
         self.label_antecedentes_policiales_documento.grid(row=1, column=1, padx=10, pady=10)
-        self.boton_antecedentes_policiales = tkinter.Button(self.menuScreen, text="Ingresar documento", command=lambda: self.browse_file(self.label_antecedentes_policiales_documento))
+        self.boton_antecedentes_policiales = tkinter.Button(self.menuScreen, text="Ingresar documento", command=lambda: self.browse_file(self.label_antecedentes_policiales_documento, "antecedentes_policiales"))
         self.boton_antecedentes_policiales.grid(row=1, column=2, padx=10, pady=10)
 
         self.label_boleto_ornato = tkinter.Label(self.menuScreen, text="Boleto de ornato:")
         self.label_boleto_ornato.grid(row=2, column=0, padx=10, pady=10)
         self.label_boleto_ornato_documento = tkinter.Label(self.menuScreen, text="Ningún archivo seleccionado")
         self.label_boleto_ornato_documento.grid(row=2, column=1, padx=10, pady=10)
-        self.boton_boleto_ornato = tkinter.Button(self.menuScreen, text="Ingresar documento", command=lambda: self.browse_file(self.label_boleto_ornato_documento))
+        self.boton_boleto_ornato = tkinter.Button(self.menuScreen, text="Ingresar documento", command=lambda: self.browse_file(self.label_boleto_ornato_documento, "boleto_ornato"))
         self.boton_boleto_ornato.grid(row=2, column=2, padx=10, pady=10)
 
         self.label_constancia_laboral = tkinter.Label(self.menuScreen, text="Constancia laboral:")
         self.label_constancia_laboral.grid(row=3, column=0, padx=10, pady=10)
         self.label_constancia_laboral_documento = tkinter.Label(self.menuScreen, text="Ningún archivo seleccionado")
         self.label_constancia_laboral_documento.grid(row=3, column=1, padx=10, pady=10)
-        self.boton_constancia_laboral = tkinter.Button(self.menuScreen, text="Ingresar documento", command=lambda: self.browse_file(self.label_constancia_laboral_documento))
+        self.boton_constancia_laboral = tkinter.Button(self.menuScreen, text="Ingresar documento", command=lambda: self.browse_file(self.label_constancia_laboral_documento, "constancia_laboral"))
         self.boton_constancia_laboral.grid(row=3, column=2, padx=10, pady=10)
 
         self.label_cartas_recomendacion = tkinter.Label(self.menuScreen, text="Cartas de recomendación:")
         self.label_cartas_recomendacion.grid(row=4, column=0, padx=10, pady=10)
         self.label_cartas_recomendacion_documento = tkinter.Label(self.menuScreen, text="Ningún archivo seleccionado")
         self.label_cartas_recomendacion_documento.grid(row=4, column=1, padx=10, pady=10)
-        self.boton_cartas_recomendacion = tkinter.Button(self.menuScreen, text="Ingresar documento", command=lambda: self.browse_file(self.label_cartas_recomendacion_documento))
+        self.boton_cartas_recomendacion = tkinter.Button(self.menuScreen, text="Ingresar documento", command=lambda: self.browse_file(self.label_cartas_recomendacion_documento, "cartas_recomendacion"))
         self.boton_cartas_recomendacion.grid(row=4, column=2, padx=10, pady=10)
 
         self.label_presentar_cv = tkinter.Label(self.menuScreen, text="Presentar CV:")
         self.label_presentar_cv.grid(row=5, column=0, padx=10, pady=10)
         self.label_presentar_cv_documento = tkinter.Label(self.menuScreen, text="Ningún archivo seleccionado")
         self.label_presentar_cv_documento.grid(row=5, column=1, padx=10, pady=10)
-        self.boton_presentar_cv = tkinter.Button(self.menuScreen, text="Ingresar documento", command=lambda: self.browse_file(self.label_presentar_cv_documento))
+        self.boton_presentar_cv = tkinter.Button(self.menuScreen, text="Ingresar documento", command=lambda: self.browse_file(self.label_presentar_cv_documento, "cv"))
         self.boton_presentar_cv.grid(row=5, column=2, padx=10, pady=10)
+        
+        self.botonContinuar = tkinter.Button(self.menuScreen, text="Continuar", command=self.agregarDocumentos)
+        self.botonContinuar.grid(row=6, column=0, columnspan=4, padx=10, pady=10)
+        
+    
+    def agregarDocumentos(self):
+        if self.documentos != {}:
+            with open("usuarios.json", "r") as file:
+                data = json.load(file)
+            
+            for user in data["users"]:
+                if user["user"] == self.usuario:
+                    user["documentos"] = self.documentos
+                    break
+                
+            with open("usuarios.json", "w") as file:
+                json.dump(data, file, indent=4)
+        else:
+            tkinter.messagebox.showerror("Error", "Por favor, complete todos los campos obligatorios.")
+            
+        self.menuScreen.destroy()
+        tkinter.messagebox.showinfo("Información", "Perfil y documentos guardados exitosamente.")
+        
+        RecomendacionEscuela(self.usuario)
+        
         
         
 Menu("perro")
