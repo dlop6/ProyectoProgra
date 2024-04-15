@@ -51,7 +51,7 @@ class Menu:
         self.entry_departamento = tkinter.OptionMenu(self.menuScreen, self.departamento_var, *self.departamento_options)
         self.entry_departamento.grid(row=2, column=3, padx=10, pady=10)
         
-        self.label_clima = tkinter.Label(self.menuScreen, text="Clima:")
+        self.label_clima = tkinter.Label(self.menuScreen, text="Clima de preferencia:")
         self.label_clima.grid(row=4, column=0, padx=10, pady=10)
 
         self.clima_options = ["Templado", "Frio", "Caliente"]

@@ -6,11 +6,7 @@ from Login import Login
 ventana = tkinter.Tk()
 ventana.title("")
 
-def main():
-    """
-    Función principal del programa.
-    Crea una ventana de tkinter y muestra la pantalla de inicio de sesión.
-    """
-    Login(ventana)
+
+Login(ventana)
 
 ventana.mainloop()
