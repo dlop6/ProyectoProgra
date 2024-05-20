@@ -265,6 +265,18 @@
             "password": "pepe",
             "perfil": {},
             "documentos": {}
+        },
+        {
+            "user": "carlangas",
+            "password": "pepe",
+            "perfil": {},
+            "documentos": {}
+        },
+        {
+            "user": "lucio",
+            "password": "123",
+            "perfil": {},
+            "documentos": {}
         }
     ]
 }

@@ -159,14 +159,13 @@ class Login:
             data.append(nuevo_usuario)
             
             # Guardar la lista actualizada en el archivo CSV
-            with open("data\\usuariosEstudiantes.csv", "w", newline='') as file:
+            with open("data\\usersEstudiantes.csv", "w", newline='') as file:
                 writer = csv.writer(file)
                 writer.writerows(data)
             
             # Mostrar mensaje de confirmación
             messagebox.showinfo("Usuario creado", f"El usuario {usuario} ha sido creado exitosamente, ya puedes iniciar sesión")
-        
-       
+  
     def create_maestro_user(self):
         """
         Método que se ejecuta al hacer clic en el botón "Crear usuario".
