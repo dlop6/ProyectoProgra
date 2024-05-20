@@ -1,21 +1,21 @@
-user, password
-estudent1, password1
-estudent2, password2
-estudent3, password3
-estudent4, password4
-estudent5, password5
-estudent6, password6
-estudent7, password7
-estudent8, password8
-estudent9, password9
-estudent10, password10
-estudent11, password11
-estudent12, password12
-estudent13, password13
-estudent14, password14
-estudent15, password15
-estudent16, password16
-estudent17, password17
-estudent18, password18
-estudent19, password19
-estudent20, password20
+user,password,maestro Calificado,rating
+student1,password1,maestro322,7
+student2,password2,user8,4
+student3,password3,user10,9
+student4,password4,user10,3
+student5,password5,usuario4,7
+student6,password6,maestro3,4
+student7,password7,admin2,8
+student8,password8,admin7,4
+student9,password9,user8,2
+student10,password10,profesora6,9
+student11,password11,user9,7
+student12,password12,user8,7
+student13,password13,user10,3
+student14,password14,user10,8
+student15,password15,maestro5,5
+student16,password16,maestro3,2
+student17,password17,user9,7
+student18,password18,admin7,5
+student19,password19,maestro322,10
+student20,password20,profesora1,4

@@ -33,7 +33,7 @@ class Estadisticas:
         self.ratingApp = tk.Button(self.root, text="Calificar  App", command=self.rating_app)
         self.ratingApp.pack(pady=10)
         
-        self.mi_Calificacion = tk.Button(self.root, text="Mi calificación")
+        self.mi_Calificacion = tk.Button(self.root, text="Mi calificación", command=self.mi_calificacion)
         self.mi_Calificacion.pack(pady=10)
         
         
@@ -108,9 +108,20 @@ class Estadisticas:
         ratingButton = tk.Button(ratingWindow, text="Guardar calificación", command=lambda: guardar_calificacion(ratingEntry.get()))
         ratingButton.pack(pady=10)
         
+    def mi_calificacion(self):
+        
+        df = pd.read_csv("data\\usersEstudiantes.csv")
+        
+        maestrodf = df[df["maestro Calificado"] == self.usuario]
+        avg_rating = maestrodf["rating"].mean() 
+        
+        messagebox.showinfo("Calificación", f"Tu calificación promedio es: {avg_rating}")
+        
         
         
        
+if "__main__" == __name__:
+    Estadisticas("user10")
 
 
         

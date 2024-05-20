@@ -3,6 +3,7 @@ from tkinter import messagebox
 import json
 from Menu import Menu
 from RecomendacionEscuela import RecomendacionEscuela
+from MenuAlumnos import MenuAlumnos
 from MenuPadres import MenuPadres
 import pandas as pd
 import csv
@@ -63,6 +64,9 @@ class Login:
         with open("data\\usuarios.json", "r") as file:
             dataMaestros = json.load(file)
         
+        with open("data\\usersEstudiantes.csv", "r") as file:
+            estudiantesFile = pd.read_csv(file)
+        
         try:
             padresFile = pd.read_csv("data\\usuariosPadres.csv")
         except FileNotFoundError:
@@ -88,7 +92,10 @@ class Login:
                     break
             else:
                 print("Usuario no encontrado o contraseña incorrecta")
-                messagebox.showerror("Error de autenticación", "Usuario no encontrado o contraseña incorrecta")
+            messagebox.showerror("Error de autenticación", "Usuario no encontrado o contraseña incorrecta")
+        elif estudiantesFile is not None and estudiantesFile["user"].str.contains(usuario).any():
+            MenuAlumnos(usuario)
+            
         else:
             print("No se encontraron usuarios registrados.")
             messagebox.showerror("Error de autenticación", "No se encontraron usuarios registrados.")
@@ -132,7 +139,7 @@ class Login:
         password = self.entry_password.get()
         
         # Nuevo usuario a agregar
-        nuevo_usuario = [usuario, password]
+        nuevo_usuario = [usuario, password, "", ""]
         
         try:
             # Intentar cargar el archivo CSV de usuarios de estudiantes

@@ -31,6 +31,9 @@ class MenuPadres:
     
     def calificar_escuela(self):
         calificacionWindow = tk.Toplevel(self.ventana)
+        calificacionWindow.title("Calificar Escuela")
+        calificacionWindow.geometry("250x300")
+        
         escuelas = ["Escuela Barrio Norte", "Escuela de Chuisamayac", "EORM FRANCISCA MERIDA DE CHAVEZ",
                     "Escuela de La Reforma","Escuela Oficial Urbana Mixta Pablo Jimenez Cruz",
                     "Escuela Oficial Urbana Mixta Estados Unidos de America"
@@ -54,10 +57,10 @@ class MenuPadres:
         self.calificacion_menu = tk.OptionMenu(calificacionWindow, self.calificacion_var, *range(11))
         self.calificacion_menu.pack(pady=10)
 
-        self.boton_subir = tk.Button(calificacionWindow, text="Subir calificación", command=lambda: self.calificar(self.escuela_var.get()))
+        self.boton_subir = tk.Button(calificacionWindow, text="Subir calificación", command=lambda: self.calificar(self.escuela_var.get(), calificacionWindow))
         self.boton_subir.pack(pady=10)
     
-    def calificar(self, escuela: str):
+    def calificar(self, escuela: str, window):
         # Acá se debe actualizar el archivo CSV con la calificación de la escuela
         row_index = self.padresfile.loc[self.padresfile['user'] == self.usuario].index[0]
 
@@ -68,6 +71,11 @@ class MenuPadres:
         # Save the updated dataframe to the CSV file
         self.padresfile.to_csv("data\\usuariosPadres.csv", index=False)
         messagebox.showinfo("Calificación guardada", "Tu calificación ha sido guardada exitosamente.")
+        
+        # destroy window
+        
+        window.destroy()
+        
         
     def grafica_calificaciones(self):
         # Load data into a DataFrame

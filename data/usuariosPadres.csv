@@ -1,5 +1,5 @@
 user,password,escuela,rating
-padre1,password1,Escuela Barrio Norte,7.0
+padre1,password1,Escuela Barrio Norte,0.0
 padre2,password2,Escuela de Chuisamayac,7.5
 padre3,password3,EORM FRANCISCA MERIDA DE CHAVEZ,8.5
 padre4,password4,Escuela de La Reforma,8.0
@@ -18,4 +18,4 @@ padre16,password16,Escuela Oficial Urbana Mixta Estados Unidos de America,6.8
 padre17,password17,Escuela Barrio Norte,8.1
 padre18,password18,Escuela de Chuisamayac,7.2
 padre19,password19,EORM FRANCISCA MERIDA DE CHAVEZ,8.8
-padre20,password20,Escuela de La Reforma,8.4
+padre20,password20,Escuela Oficial Urbana Mixta Pablo Jimenez Cruz,10.0
