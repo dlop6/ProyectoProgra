@@ -1,0 +1,264 @@
+{
+    "users": [
+        {
+            "user": "maestro3",
+            "password": "carlos",
+            "perfil": {
+                "Primer nombre": "Luis",
+                "Segundo nombre": "Antonio",
+                "Primer apellido": "P\u00c3\u00a9rez",
+                "Segundo apellido": "Antonio",
+                "Fecha de nacimiento": "1976-06-02 00:00:00",
+                "Edad": "48",
+                "Nacionalidad": "guatemalteco",
+                "Departamento": "Quich\u00c3\u00a9",
+                "Clima": "Templado"
+            },
+            "documentos": {
+                "identificacion": "C:/Users/djlop/Downloads/PROYECTO- PROTOTIPO (FASE #2).pdf",
+                "antecedentes_penales": "C:/Users/djlop/Downloads/proyecto fase 3.pdf",
+                "antecedentes_policiales": "C:/Users/djlop/Downloads/proyecto fase 3.pdf",
+                "boleto_ornato": "C:/Users/djlop/Downloads/proyecto fase 3.pdf",
+                "constancia_laboral": "C:/Users/djlop/Downloads/PROYECTO- PROTOTIPO (FASE #2).pdf",
+                "cartas_recomendacion": "C:/Users/djlop/Downloads/PROYECTO- PROTOTIPO (FASE #2).pdf",
+                "cv": "C:/Users/djlop/Downloads/proyecto fase 3.pdf"
+            },
+            "Rating App": 8,
+            "Escuela": "Escuela Barrio Norte"
+        },
+        {
+            "user": "profesora1",
+            "password": "maria123",
+            "perfil": {
+                "Primer nombre": "Mar\u00c3\u00ada",
+                "Segundo nombre": "Elena",
+                "Primer apellido": "Garc\u00c3\u00ada",
+                "Segundo apellido": "L\u00c3\u00b3pez",
+                "Fecha de nacimiento": "1980-04-12 00:00:00",
+                "Edad": "44",
+                "Nacionalidad": "guatemalteca",
+                "Departamento": "Chimaltenango",
+                "Clima": "Frio"
+            },
+            "documentos": {
+                "identificacion": "C:/Users/maria/Downloads/identificacion.pdf",
+                "antecedentes_penales": "C:/Users/maria/Downloads/antecedentes_penales.pdf",
+                "antecedentes_policiales": "C:/Users/maria/Downloads/antecedentes_policiales.pdf",
+                "boleto_ornato": "C:/Users/maria/Downloads/boleto_ornato.pdf",
+                "constancia_laboral": "C:/Users/maria/Downloads/constancia_laboral.pdf",
+                "cartas_recomendacion": "C:/Users/maria/Downloads/cartas_recomendacion.pdf",
+                "cv": "C:/Users/maria/Downloads/cv.pdf"
+            },
+            "Rating App": 7,
+            "Escuela": "Escuela de La Reforma"
+        },
+        {
+            "user": "admin2",
+            "password": "securepass",
+            "perfil": {
+                "Primer nombre": "Carlos",
+                "Segundo nombre": "Eduardo",
+                "Primer apellido": "Ram\u00c3\u00adrez",
+                "Segundo apellido": "Mart\u00c3\u00adnez",
+                "Fecha de nacimiento": "1990-09-22 00:00:00",
+                "Edad": "33",
+                "Nacionalidad": "guatemalteco",
+                "Departamento": "Guatemala",
+                "Clima": "Templado"
+            },
+            "documentos": {
+                "identificacion": "C:/Users/carlos/Downloads/identificacion.pdf",
+                "antecedentes_penales": "C:/Users/carlos/Downloads/antecedentes_penales.pdf",
+                "antecedentes_policiales": "C:/Users/carlos/Downloads/antecedentes_policiales.pdf",
+                "boleto_ornato": "C:/Users/carlos/Downloads/boleto_ornato.pdf",
+                "constancia_laboral": "C:/Users/carlos/Downloads/constancia_laboral.pdf",
+                "cartas_recomendacion": "C:/Users/carlos/Downloads/cartas_recomendacion.pdf",
+                "cv": "C:/Users/carlos/Downloads/cv.pdf"
+            },
+            "Rating App": 9,
+            "Escuela": "Escuela Oficial Urbana Mixta Pablo Jimenez Cruz"
+        },
+        {
+            "user": "usuario4",
+            "password": "password123",
+            "perfil": {
+                "Primer nombre": "Ana",
+                "Segundo nombre": "Mar\u00c3\u00ada",
+                "Primer apellido": "G\u00c3\u00b3mez",
+                "Segundo apellido": "Santos",
+                "Fecha de nacimiento": "1985-11-30 00:00:00",
+                "Edad": "38",
+                "Nacionalidad": "guatemalteca",
+                "Departamento": "Escuintla",
+                "Clima": "Calido"
+            },
+            "documentos": {
+                "identificacion": "C:/Users/ana/Downloads/identificacion.pdf",
+                "antecedentes_penales": "C:/Users/ana/Downloads/antecedentes_penales.pdf",
+                "antecedentes_policiales": "C:/Users/ana/Downloads/antecedentes_policiales.pdf",
+                "boleto_ornato": "C:/Users/ana/Downloads/boleto_ornato.pdf",
+                "constancia_laboral": "C:/Users/ana/Downloads/constancia_laboral.pdf",
+                "cartas_recomendacion": "C:/Users/ana/Downloads/cartas_recomendacion.pdf",
+                "cv": "C:/Users/ana/Downloads/cv.pdf"
+            },
+            "Rating App": 6,
+            "Escuela": "EORM FRANCISCA MERIDA DE CHAVEZ"
+        },
+        {
+            "user": "maestro5",
+            "password": "teacher2023",
+            "perfil": {
+                "Primer nombre": "Jorge",
+                "Segundo nombre": "Luis",
+                "Primer apellido": "Mart\u00c3\u00adnez",
+                "Segundo apellido": "Garc\u00c3\u00ada",
+                "Fecha de nacimiento": "1975-03-10 00:00:00",
+                "Edad": "49",
+                "Nacionalidad": "guatemalteco",
+                "Departamento": "Santa Rosa",
+                "Clima": "Frio"
+            },
+            "documentos": {
+                "identificacion": "C:/Users/jorge/Downloads/identificacion.pdf",
+                "antecedentes_penales": "C:/Users/jorge/Downloads/antecedentes_penales.pdf",
+                "antecedentes_policiales": "C:/Users/jorge/Downloads/antecedentes_policiales.pdf",
+                "boleto_ornato": "C:/Users/jorge/Downloads/boleto_ornato.pdf",
+                "constancia_laboral": "C:/Users/jorge/Downloads/constancia_laboral.pdf",
+                "cartas_recomendacion": "C:/Users/jorge/Downloads/cartas_recomendacion.pdf",
+                "cv": "C:/Users/jorge/Downloads/cv.pdf"
+            },
+            "Rating App": 5,
+            "Escuela": "Escuela de Chuisamayac"
+        },
+        {
+            "user": "profesora6",
+            "password": "teach2024",
+            "perfil": {
+                "Primer nombre": "Carmen",
+                "Segundo nombre": "Rosa",
+                "Primer apellido": "Flores",
+                "Segundo apellido": "Hern\u00c3\u00a1ndez",
+                "Fecha de nacimiento": "1982-07-19 00:00:00",
+                "Edad": "41",
+                "Nacionalidad": "guatemalteca",
+                "Departamento": "Solol\u00c3\u00a1",
+                "Clima": "Templado"
+            },
+            "documentos": {
+                "identificacion": "C:/Users/carmen/Downloads/identificacion.pdf",
+                "antecedentes_penales": "C:/Users/carmen/Downloads/antecedentes_penales.pdf",
+                "antecedentes_policiales": "C:/Users/carmen/Downloads/antecedentes_policiales.pdf",
+                "boleto_ornato": "C:/Users/carmen/Downloads/boleto_ornato.pdf",
+                "constancia_laboral": "C:/Users/carmen/Downloads/constancia_laboral.pdf",
+                "cartas_recomendacion": "C:/Users/carmen/Downloads/cartas_recomendacion.pdf",
+                "cv": "C:/Users/carmen/Downloads/cv.pdf"
+            },
+            "Rating App": 7,
+            "Escuela": "Escuela Oficial Urbana Mixta Estados Unidos de America"
+        },
+        {
+            "user": "admin7",
+            "password": "adminpass",
+            "perfil": {
+                "Primer nombre": "Roberto",
+                "Segundo nombre": "Carlos",
+                "Primer apellido": "L\u00c3\u00b3pez",
+                "Segundo apellido": "Gonz\u00c3\u00a1lez",
+                "Fecha de nacimiento": "1987-12-25 00:00:00",
+                "Edad": "36",
+                "Nacionalidad": "guatemalteco",
+                "Departamento": "Pet\u00c3\u00a9n",
+                "Clima": "Calido"
+            },
+            "documentos": {
+                "identificacion": "C:/Users/roberto/Downloads/identificacion.pdf",
+                "antecedentes_penales": "C:/Users/roberto/Downloads/antecedentes_penales.pdf",
+                "antecedentes_policiales": "C:/Users/roberto/Downloads/antecedentes_policiales.pdf",
+                "boleto_ornato": "C:/Users/roberto/Downloads/boleto_ornato.pdf",
+                "constancia_laboral": "C:/Users/roberto/Downloads/constancia_laboral.pdf",
+                "cartas_recomendacion": "C:/Users/roberto/Downloads/cartas_recomendacion.pdf",
+                "cv": "C:/Users/roberto/Downloads/cv.pdf"
+            },
+            "Rating App": 8,
+            "Escuela": "Escuela desconocida"
+        },
+        {
+            "user": "user8",
+            "password": "userpass",
+            "perfil": {
+                "Primer nombre": "Laura",
+                "Segundo nombre": "Isabel",
+                "Primer apellido": "M\u00c3\u00a9ndez",
+                "Segundo apellido": "Ruiz",
+                "Fecha de nacimiento": "1995-05-14 00:00:00",
+                "Edad": "29",
+                "Nacionalidad": "guatemalteca",
+                "Departamento": "Alta Verapaz",
+                "Clima": "Templado"
+            },
+            "documentos": {
+                "identificacion": "C:/Users/laura/Downloads/identificacion.pdf",
+                "antecedentes_penales": "C:/Users/laura/Downloads/antecedentes_penales.pdf",
+                "antecedentes_policiales": "C:/Users/laura/Downloads/antecedentes_policiales.pdf",
+                "boleto_ornato": "C:/Users/laura/Downloads/boleto_ornato.pdf",
+                "constancia_laboral": "C:/Users/laura/Downloads/constancia_laboral.pdf",
+                "cartas_recomendacion": "C:/Users/laura/Downloads/cartas_recomendacion.pdf",
+                "cv": "C:/Users/laura/Downloads/cv.pdf"
+            },
+            "Rating App": 9,
+            "Escuela": "Escuela Barrio Norte"
+        },
+        {
+            "user": "user9",
+            "password": "mypassword",
+            "perfil": {
+                "Primer nombre": "David",
+                "Segundo nombre": "Enrique",
+                "Primer apellido": "Rodr\u00c3\u00adguez",
+                "Segundo apellido": "Cruz",
+                "Fecha de nacimiento": "1992-08-23 00:00:00",
+                "Edad": "31",
+                "Nacionalidad": "guatemalteco",
+                "Departamento": "Jutiapa",
+                "Clima": "Calido"
+            },
+            "documentos": {
+                "identificacion": "C:/Users/david/Downloads/identificacion.pdf",
+                "antecedentes_penales": "C:/Users/david/Downloads/antecedentes_penales.pdf",
+                "antecedentes_policiales": "C:/Users/david/Downloads/antecedentes_policiales.pdf",
+                "boleto_ornato": "C:/Users/david/Downloads/boleto_ornato.pdf",
+                "constancia_laboral": "C:/Users/david/Downloads/constancia_laboral.pdf",
+                "cartas_recomendacion": "C:/Users/david/Downloads/cartas_recomendacion.pdf",
+                "cv": "C:/Users/david/Downloads/cv.pdf"
+            },
+            "Rating App": 4,
+            "Escuela": "Escuela de Chuisamayac"
+        },
+        {
+            "user": "user10",
+            "password": "12345",
+            "perfil": {
+                "Primer nombre": "Luc\u00c3\u00ada",
+                "Segundo nombre": "Fernanda",
+                "Primer apellido": "Ram\u00c3\u00adrez",
+                "Segundo apellido": "P\u00c3\u00a9rez",
+                "Fecha de nacimiento": "2000-02-15 00:00:00",
+                "Edad": "24",
+                "Nacionalidad": "guatemalteca",
+                "Departamento": "Zacapa",
+                "Clima": "Calido"
+            },
+            "documentos": {
+                "identificacion": "C:/Users/lucia/Downloads/identificacion.pdf",
+                "antecedentes_penales": "C:/Users/lucia/Downloads/antecedentes_penales.pdf",
+                "antecedentes_policiales": "C:/Users/lucia/Downloads/antecedentes_policiales.pdf",
+                "boleto_ornato": "C:/Users/lucia/Downloads/boleto_ornato.pdf",
+                "constancia_laboral": "C:/Users/lucia/Downloads/constancia_laboral.pdf",
+                "cartas_recomendacion": "C:/Users/lucia/Downloads/cartas_recomendacion.pdf",
+                "cv": "C:/Users/lucia/Downloads/cv.pdf"
+            },
+            "Rating App": 6,
+            "Escuela": "EORM FRANCISCA MERIDA DE CHAVEZ"
+        }
+    ]
+}

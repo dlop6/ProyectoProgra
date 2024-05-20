@@ -2,6 +2,7 @@ from tkinter import *
 from tkinter import messagebox
 import json
 from Menu import Menu
+from RecomendacionEscuela import RecomendacionEscuela
 
 class Login:
     def __init__(self, ventana):
@@ -13,8 +14,12 @@ class Login:
         """
         self.ventana = ventana
         self.usuario = None
+        
+        self.label_titulo = Label(ventana, text="Bienvenido a tu sistema escolar favorito", font=("Arial", 16, "bold"))
+        self.label_titulo.pack()
+        
         self.ventana.title("Iniciar sesión")
-        self.ventana.geometry("300x200")
+        self.ventana.geometry("440x250")
         
         self.label_usuario = Label(ventana, text="Usuario:")
         self.label_usuario.pack()
@@ -42,7 +47,7 @@ class Login:
         usuario = self.entry_usuario.get()
         password = self.entry_password.get()
 
-        with open("usuarios.json", "r") as file:
+        with open("data\\usuarios.json", "r") as file:
             data = json.load(file)
         
         if data["users"]:
@@ -51,7 +56,11 @@ class Login:
                     print("Usuario autenticado:", usuario)
                     self.usuario = usuario
                     self.ventana.destroy()
-                    Menu(self.getUsuario())
+                    
+                    if user["perfil"] != {} or user["documentos"] != {}:
+                        RecomendacionEscuela(usuario)
+                    else: 
+                        Menu(usuario)
                     
                     break
             else:
@@ -70,7 +79,7 @@ class Login:
 
         
         try:
-            with open("usuarios.json", "r") as file:
+            with open("data\\usuarios.json", "r") as file:
                 data = json.load(file)
         except json.JSONDecodeError:
             data = {"users": []}
@@ -87,7 +96,7 @@ class Login:
         data["users"].append(n_usuario)
 
         # Open the file in write mode and dump the data
-        with open("usuarios.json", "w") as file:
+        with open("data\\usuarios.json", "w") as file:
             json.dump(data, file, indent=4)
         
     

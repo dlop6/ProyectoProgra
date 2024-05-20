@@ -2,6 +2,7 @@ import tkinter
 from tkinter import filedialog
 from RecomendacionEscuela import RecomendacionEscuela
 import json
+import datetime
 
 class Menu:
     
@@ -83,7 +84,11 @@ class Menu:
     def agregarPerfil(self):
         primer_nombre = self.entry_primer_nombre.get()
         primer_apellido = self.entry_primer_apellido.get()
-        fecha_nacimiento = self.entry_fecha_nacimiento.get()
+        try:
+            fecha_nacimiento = datetime.datetime.strptime(self.entry_fecha_nacimiento.get(), "%d/%m/%y")
+        except ValueError:
+            tkinter.messagebox.showerror("Error", "Formato de fecha incorrecto. Debe ser dd/mm/yy.")
+            return
         nacionalidad = self.entry_nacionalidad.get()
         
         if primer_nombre != "" and primer_apellido != "" and fecha_nacimiento != "" and nacionalidad != "" and self.documentos != {}:
@@ -92,11 +97,12 @@ class Menu:
             self.perfil["Primer apellido"] = primer_apellido
             self.perfil["Segundo apellido"] = self.entry_segundo_apellido.get()
             self.perfil["Fecha de nacimiento"] = fecha_nacimiento
+            self.perfil["Edad"] = str(datetime.datetime.now().year - fecha_nacimiento.year)
             self.perfil["Nacionalidad"] = nacionalidad
             self.perfil["Departamento"] = self.departamento_var.get()
             self.perfil["Clima"] = self.clima_var.get()
             
-            with open("usuarios.json", "r") as file:
+            with open("data\\usuarios.json", "r") as file:
                 data = json.load(file)
             
             for user in data["users"]:
@@ -105,9 +111,8 @@ class Menu:
                     user["documentos"] = self.documentos
                     break
                 
-            with open("usuarios.json", "w") as file:
-                json.dump(data, file, indent=4)
-                
+            with open("data\\usuarios.json", "w") as file:
+                json.dump(data, file, indent=4, default=str)
             self.menuDocumentos()
         else:
             tkinter.messagebox.showerror("Error", "Por favor, complete todos los campos obligatorios.")
@@ -166,7 +171,7 @@ class Menu:
     
     def agregarDocumentos(self):
         if self.documentos != {}:
-            with open("usuarios.json", "r") as file:
+            with open("data\\usuarios.json", "r") as file:
                 data = json.load(file)
             
             for user in data["users"]:
@@ -174,7 +179,7 @@ class Menu:
                     user["documentos"] = self.documentos
                     break
                 
-            with open("usuarios.json", "w") as file:
+            with open("data\\usuarios.json", "w") as file:
                 json.dump(data, file, indent=4)
         else:
             tkinter.messagebox.showerror("Error", "Por favor, complete todos los campos obligatorios.")

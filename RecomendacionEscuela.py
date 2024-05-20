@@ -1,5 +1,6 @@
 import tkinter as tk
 import json
+from Estadisticas import Estadisticas
 
 class RecomendacionEscuela:
     def __init__(self, usuario):
@@ -7,17 +8,25 @@ class RecomendacionEscuela:
         self.perfil = None
         self.departamentosDisponibles = []
         self.ventana = tk.Tk()
+        self.ventana.resizable(True, True)
         self.ventana.title("Recomendación de escuela")
         self.ventana.geometry("300x200")
         
         self.label_usuario = tk.Label(self.ventana, text="Usuario: " + self.usuario)
         self.label_usuario.pack(pady=10)
         
+        self.botonMenuEstadisticas = tk.Button(self.ventana, text="Estadisticas", command= lambda: Estadisticas(self.usuario))
+        self.botonMenuEstadisticas.pack(pady=10)
+        
         self.label_recomendacion = tk.Label(self.ventana, text="Basado en tu perfil, encontramos estas escuelas para ti")
         self.label_recomendacion.pack(pady=10)
         
         self.boton_recomendar = tk.Button(self.ventana, text="Recomendar escuela", command=self.recomendar)
         self.boton_recomendar.pack(pady=10)
+         
+        self.boton_salir = tk.Button(self.ventana, text="Salir", command=self.ventana.destroy)
+        self.boton_salir.pack(pady=10)
+        
         
         self.ajustar_geometria(self.ventana)
         
@@ -25,7 +34,7 @@ class RecomendacionEscuela:
         
     def recomendar(self):
             
-        with open("usuarios.json", "r") as file:
+        with open("data\\usuarios.json", "r") as file:
             dataUsuarios = json.load(file)
             
         for user in dataUsuarios["users"]:
@@ -50,9 +59,14 @@ class RecomendacionEscuela:
         newScreen.geometry("300x200")
         
         
-        with open("escuelas.json", "r") as file:
+        
+        with open("data\\escuelas.json", "r") as file:
             dataEscuelas = json.load(file)
         img = tk.PhotoImage(file=f"img/{(departamento).lower()}.png")
+        
+        # redimensionar imagen 
+        img = img.subsample(2)
+        
         escuela = dataEscuelas[departamento]
         
         row = 1
@@ -64,9 +78,14 @@ class RecomendacionEscuela:
             label_value.grid(row=row, column=2, pady=5, sticky="nsew")
             
             row += 1
+        
+        aplicarButton = tk.Button(newScreen, text="Aplicar", command=lambda: self.aplicar_escuela(escuela))
+        aplicarButton.grid(row=row+1, column=1, columnspan=2, pady=10, sticky="nsew")
             
         img_label = tk.Label(newScreen, image=img)
-        img_label.grid(row=row, column=1, columnspan=2, pady=10, sticky="nsew")
+        img_label.grid(row=row+1, column=1, columnspan=2, pady=10, sticky="nsew")
+        
+        
         self.ajustar_geometria(newScreen)
         self.ventana.mainloop()
         
@@ -78,6 +97,15 @@ class RecomendacionEscuela:
         x = (root.winfo_screenwidth() // 2) - (width // 2)  # Calcular la posición x centrada
         y = (root.winfo_screenheight() // 2) - (height // 2)  # Calcular la posición y centrada
         root.geometry(f"{width}x{height}+{x}+{y}")
+    
+    def aplicar_escuela(self, dataEscuela):
+        with open("data\\usuarios.json", "r") as file:
+            dataUsuarios = json.load(file)
+        
+        for user in dataUsuarios["users"]:
+            if user["user"] == self.usuario:
+                user["Escuela"] = dataEscuela["nombre"]
+                break
         
 if __name__ == "__main__":
     

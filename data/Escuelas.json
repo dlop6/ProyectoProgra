@@ -1,5 +1,6 @@
 {
     "Quiche": {
+        "id": 1,
         "nombre": "Escuela Barrio Norte",
         "estudiantes": 640,
         "capacidad": 300,
@@ -7,16 +8,20 @@
         "salones": "Todos en un mismo salon",
         "directora": "Maria Magdalena Pérez",
         "clima": "templado",
-        "distancia_capital": "140km"
+        "distancia_capital": "140km",
+        "Calificacion": 8.3
     },
     "Solola": {
+        "id": 2,
         "nombre": "Escuela de Chuisamayac",
         "estudiantes": 265,
         "drenajes": "No cuenta con drenajes",
         "clima": "templado",
-        "distancia_ciudad": "140km"
+        "distancia_ciudad": "140km",
+        "Calificacion": 7.5
     },
     "Huehuetenango": {
+        "id": 3,
         "nombre": "EORM FRANCISCA MERIDA DE CHAVEZ",
         "estudiantes": 200,
         "salones_primaria": 6,
@@ -26,9 +31,11 @@
         "distancia_capital": "255km",
         "area": "Rural",
         "jornada": "Matutina",
-        "plan": "Diario (Regular)"
+        "plan": "Diario (Regular)",
+        "Calificacion": 8.5
     },
     "Retalhuleu": {
+        "id": 4,
         "nombre": "Escuela de La Reforma",
         "estudiantes": 300,
         "salones_primaria": 12,
@@ -36,9 +43,12 @@
         "servicios": ["Enfermeria", "Salas de reuniones", "Oficina para profesores y gobiernos escolares"],
         "director": "Mariano Galvez",
         "clima": "caliente",
-        "distancia_capital": "357km"
+        "distancia_capital": "357km",
+        "Calificacion": 8.0
+
     },
     "El Progreso": {
+        "id": 5,
         "nombre": "Escuela Oficial Urbana Mixta Pablo Jimenez Cruz",
         "estudiantes": 611,
         "jornada": "matutina",
@@ -47,9 +57,11 @@
         "director": "Eswin René Marroquin",
         "supervisora": "Ileana Hortencia Casasola Oliva",
         "clima": "caliente",
-        "distancia_capital": "95km"
+        "distancia_capital": "95km",
+        "Calificacion": 8.2
     },
     "Sacatepequez": {
+        "id": 6,
         "nombre": "Escuela Oficial Urbana Mixta Estados Unidos de America",
         "estudiantes": 935,
         "nivel": "primario",
@@ -57,6 +69,8 @@
         "plan": "diario",
         "supervisora": "Ana Meliza Cuyan Valenzuela",
         "clima": "templado",
-        "distancia_capital": "26km"
+        "distancia_capital": "26km",
+        "Calificacion": 6.3
+
     }
 }
