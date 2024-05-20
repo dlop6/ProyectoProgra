@@ -40,25 +40,36 @@ class Estadisticas:
         self.root.mainloop()
         
     def estadisticas_edad_maestros(self):
-        users = self.data["users"]
-        df = pd.DataFrame([{ 'Edad': int(user['perfil']['Edad']), 
-                'Escuela': user['Escuela']} for user in users])
+        with open('data\\usuarios.json', 'r') as file:
+            data = json.load(file)
 
-        avg_edad_by_escuela = df.groupby('Escuela')['Edad'].mean().reset_index()
-        plt.figure(figsize=(10, 6))
-        plt.bar(avg_edad_by_escuela['Escuela'], avg_edad_by_escuela['Edad'], color='skyblue')
-        plt.xlabel('Escuela')
-        plt.ylabel('Edad Promedio')
-        plt.title('Edad Promedio por Escuela')
-        plt.xticks(avg_edad_by_escuela['Escuela'], rotation=45, ha='right')
-        
-        # Add label with the amount of users per escuela
-        for i, escuela in enumerate(avg_edad_by_escuela['Escuela']):
-            users_count = df[df['Escuela'] == escuela].shape[0]
-            plt.text(i, avg_edad_by_escuela['Edad'][i], f'Maestros: {users_count}', ha='center', va='bottom')
-        
+        # Extract relevant data
+        users = data["users"]
+        user_list = []
+
+        for user in users:
+            perfil = user.get("perfil", {})
+            if perfil:
+                escuela = user.get("Escuela", "Unknown")
+                edad = perfil.get("Edad")
+                if edad:
+                    user_list.append({"Escuela": escuela, "Edad": int(edad)})
+
+        # Create a DataFrame
+        df = pd.DataFrame(user_list)
+
+        # Group by "Escuela" and calculate the average "Edad"
+        avg_age_per_school = df.groupby("Escuela")["Edad"].mean()
+
+        # Plot the results
+        avg_age_per_school.plot(kind='bar', color='skyblue')
+        plt.title('Average Age for Each School')
+        plt.xlabel('School')
+        plt.ylabel('Average Age')
+        plt.xticks(rotation=45, ha='right')
         plt.tight_layout()
         plt.show()
+
         
     def estadisticas_alumnos(self):
         
