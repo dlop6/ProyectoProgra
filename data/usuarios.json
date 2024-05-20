@@ -259,6 +259,12 @@
             },
             "Rating App": 6,
             "Escuela": "EORM FRANCISCA MERIDA DE CHAVEZ"
+        },
+        {
+            "user": "maestro322",
+            "password": "pepe",
+            "perfil": {},
+            "documentos": {}
         }
     ]
 }

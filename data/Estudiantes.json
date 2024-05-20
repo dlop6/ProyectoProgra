@@ -1,0 +1,255 @@
+{
+        "Escuela Oficial Urbana Mixta Pablo Jimenez Cruz": [
+            {
+                "carnet": "A001",
+                "edad": 8
+            },
+            {
+                "carnet": "A002",
+                "edad": 9
+            },
+            {
+                "carnet": "A003",
+                "edad": 10
+            },
+            {
+                "carnet": "A004",
+                "edad": 11
+            },
+            {
+                "carnet": "A005",
+                "edad": 12
+            },
+            {
+                "carnet": "A006",
+                "edad": 8
+            },
+            {
+                "carnet": "A007",
+                "edad": 9
+            },
+            {
+                "carnet": "A008",
+                "edad": 10
+            },
+            {
+                "carnet": "A009",
+                "edad": 11
+            },
+            {
+                "carnet": "A010",
+                "edad": 12
+            }
+        ],
+        "Escuela Barrio Norte": [
+            {
+                "carnet": "B001",
+                "edad": 8
+            },
+            {
+                "carnet": "B002",
+                "edad": 9
+            },
+            {
+                "carnet": "B003",
+                "edad": 10
+            },
+            {
+                "carnet": "B004",
+                "edad": 11
+            },
+            {
+                "carnet": "B005",
+                "edad": 12
+            },
+            {
+                "carnet": "B006",
+                "edad": 8
+            },
+            {
+                "carnet": "B007",
+                "edad": 9
+            },
+            {
+                "carnet": "B008",
+                "edad": 10
+            },
+            {
+                "carnet": "B009",
+                "edad": 11
+            },
+            {
+                "carnet": "B010",
+                "edad": 12
+            }
+        ],
+        "Escuela de Chuisamayac": [
+            {
+                "carnet": "C001",
+                "edad": 8
+            },
+            {
+                "carnet": "C002",
+                "edad": 9
+            },
+            {
+                "carnet": "C003",
+                "edad": 10
+            },
+            {
+                "carnet": "C004",
+                "edad": 11
+            },
+            {
+                "carnet": "C005",
+                "edad": 12
+            },
+            {
+                "carnet": "C006",
+                "edad": 8
+            },
+            {
+                "carnet": "C007",
+                "edad": 9
+            },
+            {
+                "carnet": "C008",
+                "edad": 10
+            },
+            {
+                "carnet": "C009",
+                "edad": 11
+            },
+            {
+                "carnet": "C010",
+                "edad": 12
+            }
+        ],
+        "EORM FRANCISCA MERIDA DE CHAVEZ": [
+            {
+                "carnet": "D001",
+                "edad": 8
+            },
+            {
+                "carnet": "D002",
+                "edad": 9
+            },
+            {
+                "carnet": "D003",
+                "edad": 10
+            },
+            {
+                "carnet": "D004",
+                "edad": 11
+            },
+            {
+                "carnet": "D005",
+                "edad": 12
+            },
+            {
+                "carnet": "D006",
+                "edad": 8
+            },
+            {
+                "carnet": "D007",
+                "edad": 9
+            },
+            {
+                "carnet": "D008",
+                "edad": 10
+            },
+            {
+                "carnet": "D009",
+                "edad": 11
+            },
+            {
+                "carnet": "D010",
+                "edad": 12
+            }
+        ],
+        "Escuela de La Reforma": [
+            {
+                "carnet": "E001",
+                "edad": 8
+            },
+            {
+                "carnet": "E002",
+                "edad": 9
+            },
+            {
+                "carnet": "E003",
+                "edad": 10
+            },
+            {
+                "carnet": "E004",
+                "edad": 11
+            },
+            {
+                "carnet": "E005",
+                "edad": 12
+            },
+            {
+                "carnet": "E006",
+                "edad": 8
+            },
+            {
+                "carnet": "E007",
+                "edad": 9
+            },
+            {
+                "carnet": "E008",
+                "edad": 10
+            },
+            {
+                "carnet": "E009",
+                "edad": 11
+            },
+            {
+                "carnet": "E010",
+                "edad": 12
+            }
+        ],
+        "Escuela Oficial Urbana Mixta Estados Unidos de America": [
+            {
+                "carnet": "F001",
+                "edad": 8
+            },
+            {
+                "carnet": "F002",
+                "edad": 9
+            },
+            {
+                "carnet": "F003",
+                "edad": 10
+            },
+            {
+                "carnet": "F004",
+                "edad": 11
+            },
+            {
+                "carnet": "F005",
+                "edad": 12
+            },
+            {
+                "carnet": "F006",
+                "edad": 8
+            },
+            {
+                "carnet": "F007",
+                "edad": 9
+            },
+            {
+                "carnet": "F008",
+                "edad": 10
+            },
+            {
+                "carnet": "F009",
+                "edad": 11
+            },
+            {
+                "carnet": "F010",
+                "edad": 12
+            }
+        ]
+    }
+

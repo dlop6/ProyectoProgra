@@ -10,7 +10,7 @@ class RecomendacionEscuela:
         self.ventana = tk.Tk()
         self.ventana.resizable(True, True)
         self.ventana.title("Recomendación de escuela")
-        self.ventana.geometry("300x200")
+        self.ventana.geometry("290x280")
         
         self.label_usuario = tk.Label(self.ventana, text="Usuario: " + self.usuario)
         self.label_usuario.pack(pady=10)
@@ -78,13 +78,12 @@ class RecomendacionEscuela:
             label_value.grid(row=row, column=2, pady=5, sticky="nsew")
             
             row += 1
-        
-        aplicarButton = tk.Button(newScreen, text="Aplicar", command=lambda: self.aplicar_escuela(escuela))
-        aplicarButton.grid(row=row+1, column=1, columnspan=2, pady=10, sticky="nsew")
             
         img_label = tk.Label(newScreen, image=img)
         img_label.grid(row=row+1, column=1, columnspan=2, pady=10, sticky="nsew")
         
+        aplicarButton = tk.Button(newScreen, text="Aplicar", command=lambda: self.aplicar_escuela(escuela))
+        aplicarButton.grid(row=row+2, column=1, columnspan=2, pady=10, sticky="nsew")
         
         self.ajustar_geometria(newScreen)
         self.ventana.mainloop()
@@ -106,7 +105,3 @@ class RecomendacionEscuela:
             if user["user"] == self.usuario:
                 user["Escuela"] = dataEscuela["nombre"]
                 break
-        
-if __name__ == "__main__":
-    
-    RecomendacionEscuela("perro")

@@ -30,14 +30,11 @@ class Estadisticas:
         self.EST_edad_alumnos = tk.Button(self.root, text="Estadisticas de edad de alumnos", command=self.estadisticas_alumnos)
         self.EST_edad_alumnos.pack(pady=10)
         
-        self.ratingApp = tk.Button(self.root, text="Calificación de App", command=self.rating_app)
+        self.ratingApp = tk.Button(self.root, text="Calificar  App", command=self.rating_app)
         self.ratingApp.pack(pady=10)
         
         self.mi_Calificacion = tk.Button(self.root, text="Mi calificación")
         self.mi_Calificacion.pack(pady=10)
-        
-        self.calificarApp = tk.Button(self.root, text="Calificar la app")
-        self.calificarApp.pack(pady=10)
         
         
         self.root.mainloop()
