@@ -32,7 +32,7 @@ class MenuPadres:
     def calificar_escuela(self):
         calificacionWindow = tk.Toplevel(self.ventana)
         calificacionWindow.title("Calificar Escuela")
-        calificacionWindow.geometry("250x300")
+        calificacionWindow.geometry("300x300")
         
         escuelas = ["Escuela Barrio Norte", "Escuela de Chuisamayac", "EORM FRANCISCA MERIDA DE CHAVEZ",
                     "Escuela de La Reforma","Escuela Oficial Urbana Mixta Pablo Jimenez Cruz",

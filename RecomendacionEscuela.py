@@ -1,5 +1,6 @@
 import tkinter as tk
 import json
+from tkinter import messagebox
 from Estadisticas import Estadisticas
 
 class RecomendacionEscuela:
@@ -104,4 +105,5 @@ class RecomendacionEscuela:
         for user in dataUsuarios["users"]:
             if user["user"] == self.usuario:
                 user["Escuela"] = dataEscuela["nombre"]
+                messagebox.showinfo("Escuela aplicada", f"Se ha aplicado la escuela {dataEscuela['nombre']} a tu perfil.")
                 break

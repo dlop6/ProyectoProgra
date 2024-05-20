@@ -40,6 +40,8 @@ class MenuAlumnos:
         # widget con todos los maestros para calificar
         
         self.ratings_window = tk.Toplevel(self.window)
+        self.ratings_window.title("Calificar Maestros")
+        self.ratings_window.geometry("300x200")
         
         self.escogeMaestro = tk.Label(self.ratings_window, text="Escoge al maestro para calificar") 
         self.escogeMaestro.pack(pady=10)

@@ -77,6 +77,9 @@ class Login:
             MenuPadres(usuario)
             return
         
+        elif estudiantesFile is not None and estudiantesFile["user"].str.contains(usuario).any():
+            MenuAlumnos(usuario)
+        
         elif dataMaestros.get("users"):
             for user in dataMaestros["users"]:
                 if user["user"] == usuario and user["password"] == password:
@@ -93,8 +96,7 @@ class Login:
             else:
                 print("Usuario no encontrado o contraseña incorrecta")
             messagebox.showerror("Error de autenticación", "Usuario no encontrado o contraseña incorrecta")
-        elif estudiantesFile is not None and estudiantesFile["user"].str.contains(usuario).any():
-            MenuAlumnos(usuario)
+        
             
         else:
             print("No se encontraron usuarios registrados.")
